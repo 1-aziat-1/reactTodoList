@@ -1,11 +1,13 @@
 import _ from './Header.module.css';
 
-export const Header = ({text, setText, addTodo}) => {
+export const Header = ({text, setText, addTask}) => {
   console.log();
   return (
     <label>
       <input value={text} onChange={(e) => setText(e.target.value)}/>
-      <button onClick={() => addTodo()}>Add Todo</button>
+      <button onClick={addTask}>Add Todo</button>
     </label>
   );
 };
+
+

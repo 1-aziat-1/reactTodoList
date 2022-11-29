@@ -3,13 +3,13 @@ import { InputField } from './InputField/InputField';
 import { BtnChecked } from './BtnChecked/BtnChecked';
 import _ from './TodoItem.module.css';
 
-export const TodoItem = ({todo, toggleTodoComplete, deleteTodo}) => {
-    console.log();
+export const TodoItem = ({todo}) => {
+  console.log();
   return (
     <li key={todo.id}>
-      <InputField todo={todo} toggleTodoComplete={toggleTodoComplete}/>
+      <InputField todo={todo}/>
       <span>{todo.text}</span>
-      <BtnChecked todo={todo} deleteTodo={deleteTodo}/>
+      <BtnChecked todo={todo}/>
     </li>
   );
 };
