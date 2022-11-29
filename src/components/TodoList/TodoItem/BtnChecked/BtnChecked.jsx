@@ -1,16 +1,12 @@
 import React from 'react';
 import _ from './BtnChecked.module.css';
 
-export const BtnChecked = () => {
-  const removeTodo = (todoId) => {
-    setTodos(todos.filter(todo => todo.id !== todoId));
-  }
+export const BtnChecked = ({todo, deleteTodo}) => {
+  console.log();
   return (
     <button
       className="delete"
-      onClick={() => removeTodo(todo.id)}
-    >
-      &#10007;
+      onClick={() => deleteTodo(todo.id)}>&#10007;
     </button>
   );
 };

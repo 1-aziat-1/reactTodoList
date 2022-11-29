@@ -42,25 +42,16 @@ function App() {
 
   return (
     <div className='App'>
-      <label>
-        <input value={text} onChange={(e) => setText(e.target.value)}/>
-        <button onClick={() => addTodo()}>Add Todo</button>
-      </label>
-      <ul>
-        {
-          todos.map(todo =>
-            <li key={todo.id}>
-              <input
-                type="checkbox"
-                checked={todo.completed}
-                onChange={() => toggleTodoComplete(todo.id)}
-              />
-              <span>{todo.text}</span>
-              <button className="delete" onClick={() => deleteTodo(todo.id)}>&#10007;</button>
-            </li>
-          )
-        }
-      </ul>
+      <Header
+        text={text}
+        setText={setText}
+        addTodo={addTodo}
+      />
+      <TodoList
+        todos={todos}
+        toggleTodoComplete={toggleTodoComplete}
+        deleteTodo={deleteTodo}
+      />
     </div>
   );
 }

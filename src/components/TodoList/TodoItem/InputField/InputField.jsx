@@ -1,21 +1,8 @@
 import React from 'react';
 import _ from './InputField.module.css';
 
-export const InputField = ({todos, setTodos}, todo) => {
-  const toggleTodoComplete = (todoId) => {
-    setTodos(
-      todos.map(
-        todo => {
-          if (todo.id !== todoId) return todo;
-
-          return {
-            ...todo,
-            completed: !todo.completed,
-          }
-        }
-      )
-    );
-  };
+export const InputField = ({todo, toggleTodoComplete}) => {
+  console.log();
   return (
     <input
       type="checkbox"

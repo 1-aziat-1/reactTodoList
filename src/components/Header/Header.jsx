@@ -1,6 +1,6 @@
 import _ from './Header.module.css';
 
-export const Header = (text, setText, addTodo) => {
+export const Header = ({text, setText, addTodo}) => {
   console.log();
   return (
     <label>
